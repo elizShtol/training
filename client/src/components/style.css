@@ -1,0 +1,27 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.nav-wrapper {
+    z-index: 0;
+}
+.slide{
+    
+    margin-top: 65px;
+}
+.slideBut{
+    border-radius:0;
+}
+
+ .content{
+    /* margin-top: 65px;*/
+    padding-top: 5px; 
+    padding-right: 20px;
+    margin-left: 0;
+    margin: 65px auto;
+    width:60rem;
+} 
+
+.qwe{
+    color: black;
+}
+
+
