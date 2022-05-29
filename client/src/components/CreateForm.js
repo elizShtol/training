@@ -66,7 +66,7 @@ export const CreateForm = () => {
       message("Введите название тренировки и добавьте упражнения");
     } else {
       try {
-        const data = await request(
+        await request(
           "/api/trainings/create",
           "POST",
           {
@@ -124,10 +124,10 @@ export const CreateForm = () => {
                 className="custom-select"
                 id="inputGroupSelect01"
               >
-                <option value="1">Общая</option>
-                <option value="2">Беговая</option>
-                <option value="3">Силовая</option>
-                <option value="4">Особая</option>
+                <option value="1">Общие</option>
+                <option value="2">Беговые</option>
+                <option value="3">Силовые</option>
+                <option value="4">Особые</option>
               </select>
             </div>
           </div>

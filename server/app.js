@@ -1,9 +1,12 @@
 const express = require('express')
 const config = require('config')
 const path = require('path')
-const mongoose = require('mongoose')
+const util = require('util');
+const fs = require('fs');
+const mongoose = require("mongoose");
+const User = require("./models/User");
 require('dotenv').config()
-
+const MongoClient = require('mongodb').MongoClient;
 const app = express()
 const PORT = config.get('port') || 5000
 
@@ -23,15 +26,19 @@ if (process.env.NODE_ENV === 'production') {
 
 async function start() {
     try {
-        await mongoose.connect(config.get('mongoUri'), {
+        const options = {
             useNewUrlParser: true,
+            sslCA: fs.readFileSync(
+                    config.get("mongoCertPath")),
             useUnifiedTopology: true,
-            useCreateIndex: true
-        })
+            useCreateIndex: true,
+        }
+
+        await mongoose.connect(config.get("mongoUri"), options);
     } catch (e) {
         console.log('Server Error', e.message)
         process.exit(1)
     }
 }
 start()
-app.listen(PORT, () => console.log(PORT,'Server startanul',process.env))
+app.listen(PORT, () => console.log(PORT,'Server startanul',PORT))

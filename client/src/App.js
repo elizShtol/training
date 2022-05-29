@@ -7,7 +7,6 @@ import { AuthContext } from './context/AuthContext';
 import { NavBarC } from './components/NavBarC';
 
 
-// mongodb+srv://andry:rhefccfy@cluster0-beci1.azure.mongodb.net/app?retryWrites=true&w=majority
 
 function App() {
   const { token, login, logout, userId } = useAuth()

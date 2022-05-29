@@ -52,15 +52,15 @@ export const NavBarC = () => {
             className="btn-sm"
             id="collasible-nav-dropdown"
           >
-            <NavDropdown.Item>
+            <div>
               <NavLink className="black-text" to="training">
                 Настройки
               </NavLink>
-            </NavDropdown.Item>
+            </div>
             <NavDropdown.Item>
-              <a className="black-text" href="/" onClick={logoutHandler}>
+              <div className="black-text" href="/" onClick={logoutHandler}>
                 Выход
-              </a>
+              </div>
             </NavDropdown.Item>
           </NavDropdown>
         </div>

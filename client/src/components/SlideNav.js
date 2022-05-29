@@ -4,7 +4,6 @@ import "./style.css";
 
 export const SlideNav = (props) => {
   const changeHandler = (event) => {
-    console.log(props);
     props.setT(event.target.name);
   };
 

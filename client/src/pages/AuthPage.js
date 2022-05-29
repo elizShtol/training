@@ -3,7 +3,7 @@ import "./style.css";
 import { useHttp } from "../hooks/http.hook";
 import { useMessage } from "../hooks/message.hook";
 import { AuthContext } from "../context/AuthContext";
-import { Card,Form,Navbar} from "react-bootstrap";
+import { Card,Navbar} from "react-bootstrap";
 
 export const AuthPage = () => {
   const auth = useContext(AuthContext);

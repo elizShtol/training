@@ -8,9 +8,9 @@ export const Exercise = (props) => {
     <Card>
       <Card.Header>
         <h5 className="black-text">{props.exercise.name}</h5>
-        <Accordion.Toggle className="btn btn-dark" variant="link" eventKey={props.index}>
-          Показать описание
-        </Accordion.Toggle>
+        {/*<Accordion.Toggle className="btn btn-dark" variant="link" eventKey={props.index}>*/}
+        {/*  Показать описание*/}
+        {/*</Accordion.Toggle>*/}
         <Accordion.Toggle
           style={{ marginLeft: 5 }}
           as={Button}
@@ -20,9 +20,9 @@ export const Exercise = (props) => {
           Удалить
         </Accordion.Toggle>
       </Card.Header>
-      <Accordion.Collapse eventKey={props.index}>
+      <div >
         <Card.Body className="black-text">{props.exercise.descName}</Card.Body>
-      </Accordion.Collapse>
+      </div>
     </Card>
   );
 };

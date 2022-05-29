@@ -1,6 +1,7 @@
 {
   "port": 5000,
-  "jwtSecret": "",
-  "mongoUri": ""
+  "jwtSecret": "testsecret",
+  "mongoUri": "mongodb://...",
+  "mongoCertPath": "...\\YandexInternalRootCA.crt"
 }
 

@@ -23,8 +23,10 @@ router.post(
           .status(400)
           .json({ errors: errors.array(), message: "Некорректный ввод" });
       }
+      // console.log("USER",User)
       const { email, password } = req.body;
       const candidate = await User.findOne({ email });
+      // console.log("CA")
       if (candidate) {
         return res.status(400).json({ message: "Такой юзер есть" });
       }
@@ -34,7 +36,7 @@ router.post(
 
       res.status(201).json({ message: "пользователь создан" });
     } catch (e) {
-      res.status(500).json({ message: "что-то пошло не так" });
+      res.status(500).json({ message: e });
     }
   }
 );
@@ -47,7 +49,7 @@ router.post(
   ],
   async (req, res) => {
     try {
-      console.log("CHE")
+      // console.log("CHE")
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         return res

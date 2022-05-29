@@ -17,5 +17,5 @@ input.yellow-input:focus{
     box-shadow: 0 1px 0 0  #3b79ff!important;
 }
 body{
-    background-image: url(./phone.png);
+    background-image: url(https://storage.yandexcloud.net/training/phone.png);
 }

@@ -11,7 +11,6 @@ export const useHttp = () => {
                 body=JSON.stringify(body)
                 headers['Content-Type']='application/json'
             }
-            console.log("ads",body)
             const response = await fetch(url, { method, body, headers })
             const data = await response.json()
             if (!response.ok) {
@@ -22,7 +21,7 @@ export const useHttp = () => {
         } catch (error) {
             setLoading(false)
             setError(error.message)
-            console.log(error)
+            console.log("3",error)
             throw error
         }
 
