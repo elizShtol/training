@@ -8,7 +8,7 @@ const User = require("./models/User");
 require('dotenv').config()
 const MongoClient = require('mongodb').MongoClient;
 const app = express()
-const PORT = config.get('port') || 5000
+const PORT = process.env.PORT || 5000
 
 app.use(express.json({extended:true}))
 
